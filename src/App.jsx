@@ -1,4 +1,10 @@
 import { useState } from 'react';
+import factoryWarehouseInstallation from './images/factory-warehouse-installation.webp';
+import integratedSystemsRack from './images/integrated-systems-rack.webp';
+import productAccessControl from './images/product-access-control.webp';
+import productCctvSystem from './images/product-cctv-system.webp';
+import productDetectionNetwork from './images/product-detection-network.webp';
+import productFirePanel from './images/product-fire-panel.webp';
 import {
 	ArrowRight,
 	ArrowUpRight,
@@ -281,8 +287,8 @@ function Hero() {
 					<div className="rounded-[30px] border border-ivory/15 bg-ivory/5 p-3 shadow-2xl backdrop-blur-sm">
 						<img
 							className="h-[320px] w-full rounded-[22px] object-cover sm:h-[420px]"
-							src="https://srksystem.com/images/integrated-systems-rack.webp"
-							alt="CCTV camera mounted on a building"
+							src={integratedSystemsRack}
+							alt="Integrated fire alarm, CCTV, and security systems on a workbench"
 						/>
 						<div className="grid gap-2 p-2 sm:grid-cols-3">
 							{[
@@ -430,22 +436,22 @@ function ProductGallery() {
 		[
 			'Fire alarm panels & field devices',
 			'Conventional/addressable panels, smoke and heat detectors, MCPs, hooters and sounders.',
-			'https://srksystem.com/images/product-fire-panel.webp',
+			productFirePanel,
 		],
 		[
 			'CCTV, DVR/NVR & storage',
 			'IP, dome and bullet cameras, recorder commissioning, storage planning and mobile viewing.',
-			'https://srksystem.com/images/product-cctv-system.webp',
+			productCctvSystem,
 		],
 		[
 			'Biometric & access control',
 			'Attendance devices, card readers, EM locks, exit switches and user enrollment.',
-			'https://srksystem.com/images/product-access-control.webp',
+			productAccessControl,
 		],
 		[
 			'Detection & specialist devices',
 			'Smoke detection, interfaces, accessories and fault identification support.',
-			'https://srksystem.com/images/product-detection-network.webp',
+			productDetectionNetwork,
 		],
 	];
 
@@ -477,8 +483,7 @@ function ProductGallery() {
 				</div>
 
 				<p className="mt-4 text-xs text-slate-400">
-					Product images are displayed from srksystem.com. Brand and product availability are confirmed
-					during survey or quotation.
+					Brand and product availability are confirmed during survey or quotation.
 				</p>
 			</div>
 		</section>
@@ -506,8 +511,8 @@ function About() {
 			<div className="wrap grid items-center gap-12 lg:grid-cols-2">
 				<div className="relative">
 					<img
-						src="https://srksystem.com/images/factory-warehouse-installation.webp"
-						alt="Technician working with technical equipment"
+						src={factoryWarehouseInstallation}
+						alt="Technician installing a dome camera under a warehouse cable tray"
 						className="h-[350px] w-full rounded-[30px] object-cover sm:h-[460px]"
 					/>
 					<div className="absolute -bottom-5 right-4 rounded-2xl border border-brass/40 bg-ivory p-5 shadow-soft">
