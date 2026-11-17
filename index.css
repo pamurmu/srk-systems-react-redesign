@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	background: radial-gradient(circle at top, #f8f2e7 0%, #efe6d8 35%, #f9f6ef 100%);
+	color: #1d2a35;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+h1,
+h2 {
+	font-family: 'Cormorant Garamond', serif;
+	letter-spacing: -0.02em;
+}
+
+::selection {
+	background: #d3b16d;
+	color: #0e1722;
+}
+
+.wrap {
+	width: min(1180px, calc(100% - 36px));
+	margin: auto;
+}
+
+.pad {
+	padding-block: 84px;
+}
+
+.hero-halo {
+	background: radial-gradient(circle, #d3b16d55 0%, #7f2e2e2a 50%, transparent 80%);
+	filter: blur(16px);
+}
+
+.card-moderne {
+	transition: transform 250ms ease, border-color 250ms ease, box-shadow 250ms ease;
+}
+
+.card-moderne:hover {
+	transform: translateY(-6px);
+	border-color: #7f2e2e66;
+	box-shadow: 0 20px 55px rgba(19, 28, 39, 0.12);
+}
+
+.service-select-wrap {
+	position: relative;
+}
+
+.service-select {
+	appearance: none;
+	cursor: pointer;
+	transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.service-select:hover {
+	border-color: #cbd5e1;
+}
+
+.service-select:focus-visible {
+	border-color: #7f2e2e;
+	outline: none;
+	box-shadow: 0 0 0 3px rgb(127 46 46 / 12%);
+}
+
+.service-select-chevron {
+	position: absolute;
+	top: 50%;
+	right: 1rem;
+	color: #7f2e2e;
+	transform: translateY(-50%);
+	pointer-events: none;
+}
+
+.animate-rise {
+	animation: rise 650ms ease-out both;
+}
+
+.animate-rise-delayed {
+	animation: rise 750ms 120ms ease-out both;
+}
+
+@keyframes rise {
+	from {
+		opacity: 0;
+		transform: translateY(18px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@media (max-width: 640px) {
+	.pad {
+		padding-block: 58px;
+	}
+
+	.wrap {
+		width: calc(100% - 28px);
+	}
+}
