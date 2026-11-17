@@ -5,6 +5,7 @@ import productAccessControl from './images/product-access-control.webp';
 import productCctvSystem from './images/product-cctv-system.webp';
 import productDetectionNetwork from './images/product-detection-network.webp';
 import productFirePanel from './images/product-fire-panel.webp';
+import srkLogo from './images/srk-logo.svg';
 import {
 	ArrowRight,
 	ArrowUpRight,
@@ -32,7 +33,6 @@ const ALT = '9841083498';
 const EMAIL = 'ramesh.srksystem@gmail.com';
 const ADDRESS =
 	'5/351, Rajiv Gandhi Salai (OMR), Opp to Nilgiris, Okkiyamapet, Thoraipakkam, Chennai - 600 097.';
-const LOGO_URL = 'https://srksystem.com/logo.svg';
 const MAP_EMBED_URL =
 	'https://www.google.com/maps?q=5/351,%20Rajiv%20Gandhi%20Salai%20(OMR),%20Thoraipakkam,%20Chennai%20600097&output=embed';
 const MAP_LINK_URL =
@@ -122,15 +122,15 @@ function BrandLockup({ light = false, compact = false }) {
 	return (
 		<div className="flex items-center gap-3">
 			<img
-				src={LOGO_URL}
+				src={srkLogo}
 				alt="SRK Systems"
 				className={compact ? 'h-10 w-auto' : 'h-11 w-auto'}
 			/>
 			<span>
-				<b className={`block text-[15px] font-extrabold tracking-[0.01em] ${light ? 'text-ivory' : 'text-ink'}`}>
+				<b className={`block text-[15px] font-extrabold tracking-[0.01em] ${light ? 'text-ivory' : 'text-[#28666b]'}`}>
 					SRK SYSTEMS
 				</b>
-				<small className={`text-xs ${light ? 'text-ivory/65' : 'text-slate-500'}`}>
+				<small className={`text-xs ${light ? 'text-ivory/65' : 'text-slate-600'}`}>
 					Fire · Security · ELV
 				</small>
 			</span>
@@ -149,7 +149,7 @@ function Header() {
 	];
 
 	return (
-		<header className="sticky top-0 z-50 border-b border-brass/30 bg-ivory/90 backdrop-blur-xl">
+		<header className="sticky top-0 z-50 border-b border-[#c9dddd] bg-white/95 backdrop-blur-xl">
 			<div className="wrap flex h-[78px] items-center justify-between gap-4">
 				<a href="#home">
 					<BrandLockup compact />
@@ -158,7 +158,7 @@ function Header() {
 				<nav className="hidden gap-7 lg:flex">
 					{links.map(([label, href]) => (
 						<a
-							className="text-sm font-semibold tracking-wide text-slate-700 transition hover:text-ink"
+							className="text-sm font-semibold tracking-wide text-slate-700 transition hover:text-[#28666b]"
 							href={href}
 							key={label}
 						>
@@ -169,11 +169,11 @@ function Header() {
 
 				<div className="hidden items-center gap-4 lg:flex">
 					<a href={`tel:+91${PHONE}`} className="text-sm font-bold text-ink">
-						<Phone size={15} className="mr-2 inline text-garnet" />
+						<Phone size={15} className="mr-2 inline text-[#28666b]" />
 						{PHONE}
 					</a>
 					<a
-						className="rounded-full border border-garnet bg-garnet px-5 py-3 text-sm font-bold text-ivory transition hover:-translate-y-0.5"
+						className="rounded-full border border-[#28666b] bg-[#28666b] px-5 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5 hover:bg-[#205457]"
 						href="#contact"
 					>
 						Book a survey
@@ -186,13 +186,13 @@ function Header() {
 			</div>
 
 			{open && (
-				<nav className="border-t border-brass/30 px-5 pb-5 lg:hidden">
+				<nav className="border-t border-[#c9dddd] px-5 pb-5 lg:hidden">
 					{links.map(([label, href]) => (
 						<a
 							key={label}
 							onClick={() => setOpen(false)}
 							href={href}
-							className="block border-b border-brass/20 py-3 font-semibold text-ink"
+							className="block border-b border-[#dce9e8] py-3 font-semibold text-ink hover:text-[#28666b]"
 						>
 							{label}
 						</a>
