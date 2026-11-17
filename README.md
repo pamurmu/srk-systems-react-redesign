@@ -22,4 +22,4 @@ Run `npm run build`. Vite writes the production site to `dist/`.
 - SEO title, description and mobile viewport metadata
 
 ## Before publishing
-Confirm all contact details, service scope and brand compatibility. The product and site-context gallery currently uses image assets hosted on srksystem.com. Confirm you have permission to reuse those assets if publishing this as a replacement. Replace with owned/licensed photos when possible. The contact form does not store leads: the visitor must send the prepared message in WhatsApp. Test on mobile and run `npm run build` before deploying.
+Confirm all contact details, service scope and brand compatibility. Photos in `src/images/` are bundled from srksystem.com; confirm you have permission to reuse them before publishing and replace with owned/licensed photos when possible. The contact form does not store leads: the visitor must send the prepared message in WhatsApp. Test on mobile and run `npm run build` before deploying.
